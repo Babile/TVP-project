@@ -8,3 +8,14 @@ X:\PROJECTS C#\TVP-project\Project\obj\Debug\Project.csproj.GenerateResource.cac
 X:\PROJECTS C#\TVP-project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
 X:\PROJECTS C#\TVP-project\Project\obj\Debug\Project.exe
 X:\PROJECTS C#\TVP-project\Project\obj\Debug\Project.pdb
+D:\PROGRAMIRANJE\PROJECTS C#\TVP project\Project\bin\Debug\Project.exe.config
+D:\PROGRAMIRANJE\PROJECTS C#\TVP project\Project\bin\Debug\Project.exe
+D:\PROGRAMIRANJE\PROJECTS C#\TVP project\Project\bin\Debug\Project.pdb
+D:\PROGRAMIRANJE\PROJECTS C#\TVP project\Project\obj\Debug\Project.csprojAssemblyReference.cache
+D:\PROGRAMIRANJE\PROJECTS C#\TVP project\Project\obj\Debug\Project.Form1.resources
+D:\PROGRAMIRANJE\PROJECTS C#\TVP project\Project\obj\Debug\Project.Properties.Resources.resources
+D:\PROGRAMIRANJE\PROJECTS C#\TVP project\Project\obj\Debug\Project.csproj.GenerateResource.cache
+D:\PROGRAMIRANJE\PROJECTS C#\TVP project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+D:\PROGRAMIRANJE\PROJECTS C#\TVP project\Project\obj\Debug\Project.exe
+D:\PROGRAMIRANJE\PROJECTS C#\TVP project\Project\obj\Debug\Project.pdb
+D:\PROGRAMIRANJE\PROJECTS C#\TVP project\Project\obj\Debug\Project.Form2.resources

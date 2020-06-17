@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataBaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disconnectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.korisnikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zaposlenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.klijentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
@@ -50,25 +53,28 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label11 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.button8 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -77,13 +83,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.dataBaseToolStripMenuItem});
+            this.dataBaseToolStripMenuItem,
+            this.korisnikToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(943, 24);
@@ -128,6 +136,29 @@
             this.disconnectToolStripMenuItem.Text = "Disconnect";
             this.disconnectToolStripMenuItem.Click += new System.EventHandler(this.disconnectToolStripMenuItem_Click);
             // 
+            // korisnikToolStripMenuItem
+            // 
+            this.korisnikToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.zaposlenToolStripMenuItem,
+            this.klijentToolStripMenuItem});
+            this.korisnikToolStripMenuItem.Name = "korisnikToolStripMenuItem";
+            this.korisnikToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.korisnikToolStripMenuItem.Text = "Korisnik";
+            // 
+            // zaposlenToolStripMenuItem
+            // 
+            this.zaposlenToolStripMenuItem.Name = "zaposlenToolStripMenuItem";
+            this.zaposlenToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.zaposlenToolStripMenuItem.Text = "Zaposlen";
+            this.zaposlenToolStripMenuItem.Click += new System.EventHandler(this.zaposlenToolStripMenuItem_Click);
+            // 
+            // klijentToolStripMenuItem
+            // 
+            this.klijentToolStripMenuItem.Name = "klijentToolStripMenuItem";
+            this.klijentToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.klijentToolStripMenuItem.Text = "Klijent";
+            this.klijentToolStripMenuItem.Click += new System.EventHandler(this.klijentToolStripMenuItem_Click);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.button6);
@@ -148,6 +179,16 @@
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Kupovina";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(260, 141);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(98, 41);
+            this.button6.TabIndex = 19;
+            this.button6.Text = "Ukloni knjigu sa racuna";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // comboBox3
             // 
@@ -280,17 +321,81 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.comboBox4);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 27);
+            this.groupBox1.Location = new System.Drawing.Point(3, 46);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(462, 141);
+            this.groupBox1.Size = new System.Drawing.Size(462, 126);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opcije za dodavanje knjige";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(327, 27);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 13);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Popust:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(327, 46);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 10;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(221, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Cena:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(221, 46);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 8;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(115, 27);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Autor:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(115, 46);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(9, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Naziv:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(9, 46);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 4;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 79);
+            this.label5.Location = new System.Drawing.Point(9, 75);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 13);
             this.label5.TabIndex = 3;
@@ -299,14 +404,14 @@
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(9, 95);
+            this.comboBox4.Location = new System.Drawing.Point(9, 91);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 21);
             this.comboBox4.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(369, 95);
+            this.button1.Location = new System.Drawing.Point(369, 75);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 40);
             this.button1.TabIndex = 0;
@@ -332,128 +437,98 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Knjige";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(9, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 27);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Naziv:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(115, 27);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Autor:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(115, 46);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(221, 27);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Cena:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(221, 46);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 8;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(327, 27);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 13);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Popust:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(327, 46);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 10;
-            // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.Controls.Add(this.button7);
+            this.groupBox5.Controls.Add(this.textBox6);
             this.groupBox5.Controls.Add(this.textBox5);
-            this.groupBox5.Controls.Add(this.checkBox1);
-            this.groupBox5.Location = new System.Drawing.Point(3, 178);
+            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.Location = new System.Drawing.Point(115, 178);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(462, 48);
+            this.groupBox5.Size = new System.Drawing.Size(350, 52);
             this.groupBox5.TabIndex = 13;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Vidljivost racuna";
+            this.groupBox5.Text = "Racuni u priodu";
             // 
-            // button6
+            // button7
             // 
-            this.button6.Location = new System.Drawing.Point(260, 141);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(98, 41);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "Ukloni knjigu sa racuna";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button7.Location = new System.Drawing.Point(262, 17);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 27);
+            this.button7.TabIndex = 4;
+            this.button7.Text = "Prikazi";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // checkBox1
+            // textBox6
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(12, 19);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(131, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Vremenski ograniceno";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.textBox6.Location = new System.Drawing.Point(156, 21);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 3;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(150, 19);
+            this.textBox5.Location = new System.Drawing.Point(30, 21);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 1;
+            this.textBox5.TabIndex = 2;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(136, 24);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(24, 13);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Do:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(366, 24);
+            this.label10.Location = new System.Drawing.Point(9, 24);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 13);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Vreme: 0";
+            this.label10.Size = new System.Drawing.Size(24, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Od:";
             // 
-            // timer1
+            // label11
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(9, 27);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(109, 13);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Status: Disconnected";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.button8);
+            this.groupBox6.Location = new System.Drawing.Point(3, 178);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(106, 52);
+            this.groupBox6.TabIndex = 15;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Svi racuni";
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(12, 21);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 0;
+            this.button8.Text = "Prikazi";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 467);
+            this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -475,6 +550,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -518,10 +594,17 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ToolStripMenuItem korisnikToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zaposlenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem klijentToolStripMenuItem;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button button8;
     }
 }
 

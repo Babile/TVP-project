@@ -9,11 +9,14 @@ namespace Project
     {
         private OleDbConnection conn;
         private string DataBasePath;
+        private bool connected = false;
 
         public DataBase()
         {
             DataBasePath = Application.StartupPath + "\\Knjizara.accdb";
         }
+
+        public bool Connected { get => connected; set => connected = value; }
 
         public void ConnectToDataBase()
         {
@@ -21,6 +24,7 @@ namespace Project
             {
                 conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=" + DataBasePath);
                 conn.Open();
+                connected = true;
             }
             catch (Exception ex)
             {
@@ -36,6 +40,7 @@ namespace Project
                 {
                     conn.Close();
                     conn = null;
+                    connected = false;
                 }
             }
             catch (Exception ex)
@@ -54,9 +59,8 @@ namespace Project
                 OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter(query, conn);
                 oleDbDataAdapter.Fill(dataTable);
 
-                dataGrid.DataSource = dataTable;
-
-                dataGrid.Refresh();
+                dataGrid.DataSource = dataTable.DefaultView;
+                dataGrid.Update();
             }
             catch (Exception ex)
             {
@@ -104,6 +108,31 @@ namespace Project
                         int temp = 0;
                         int.TryParse(dataTable.Rows[i][j].ToString(), out temp);
                         number += temp;    
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void runQuery(string query, ref string[] stringArray)
+        {
+            try
+            {
+                
+                DataTable dataTable = new DataTable();
+
+                OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter(query, conn);
+                oleDbDataAdapter.Fill(dataTable);
+                stringArray = new string[dataTable.Columns.Count];
+                for (int i = 0; i < dataTable.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dataTable.Columns.Count; j++)
+                    {
+                        stringArray[j] = dataTable.Rows[i][j].ToString();
                     }
                 }
 
