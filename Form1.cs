@@ -10,7 +10,6 @@ namespace Project
     {
         public List<Book> books;
         private string[] bookInfo;
-        private int visibleBills = 0;
         private int billSum = 0;
         private int idBill = 0;
         private int idBook = 0;
@@ -94,8 +93,9 @@ namespace Project
             query = "SELECT * FROM racun";
             dataBase.runQuery(query, ref dataGridView2);
 
-            listCategory();
-            listBooks();
+            dataBase.runQuery("SELECT naziv FROM kategorija", ref comboBox1);
+            dataBase.runQuery("SELECT naziv FROM kategorija", ref comboBox4);
+            dataBase.runQuery("SELECT ID_knjiga FROM knjiga", ref comboBox2);
 
             connectToolStripMenuItem.Enabled = false;
             disconnectToolStripMenuItem.Enabled = true;
@@ -122,17 +122,6 @@ namespace Project
             label11.Text = "Status: Disconnected";
         }
 
-        private void listCategory()
-        {
-            dataBase.runQuery("SELECT naziv FROM kategorija", ref comboBox1);
-            dataBase.runQuery("SELECT naziv FROM kategorija", ref comboBox4);
-        }
-
-        private void listBooks()
-        {
-            dataBase.runQuery("SELECT ID_knjiga FROM knjiga", ref comboBox2);
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             if (comboBox2.SelectedIndex > -1)
@@ -147,6 +136,10 @@ namespace Project
                 billSum += (book.Price - discount);
                 label3.Text = "Trenutrno stanje: " + billSum;
             }
+            else
+            {
+                MessageBox.Show("Niste odabrali knjigu.");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -159,6 +152,10 @@ namespace Project
                 MessageBox.Show("Uspesno uzeto");
                 Invalidate();
             }
+            else
+            {
+                MessageBox.Show("Nemate knjigu u korpi.");
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -168,6 +165,10 @@ namespace Project
                 query = String.Format("SELECT * FROM (knjiga INNER JOIN kategorija ON knjiga.id_kategorija = kategorija.id_kategorije) WHERE kategorija.naziv = '{0}' ORDER BY knjiga.autor", comboBox1.SelectedItem.ToString());
                 dataBase.runQuery(query, ref dataGridView1);
             }
+            else
+            {
+                MessageBox.Show("Niste odabrali kategoriju.");
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -176,6 +177,10 @@ namespace Project
             {
                 query = String.Format("SELECT * FROM knjiga ORDER BY knjiga.{0}", comboBox3.SelectedItem.ToString());
                 dataBase.runQuery(query, ref dataGridView1);
+            }
+            else
+            {
+                MessageBox.Show("Niste odabrali naslov ili autora");
             }
         }
 
@@ -195,6 +200,10 @@ namespace Project
                 query = String.Format("INSERT INTO knjiga (ID_knjiga, naziv, autor, cena, popust, id_kategorija) VALUES({0}, '{1}', '{2}', {3}, {4}, {5})", ++idBook, textBox1.Text, textBox2.Text, price, discount, category);
                 dataBase.runQuery(query, ref dataGridView1);
                 MessageBox.Show("Uspesno dodata knjiga");
+            }
+            else
+            {
+                MessageBox.Show("Niste popunili sva polja.");
             }
         }
 
